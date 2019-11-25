@@ -52,6 +52,8 @@ def load_taxi(file):
 
     # TODO: insert `arr` into `db.taxi` and print the number of records inserted.
     # Use load_airbnb as an example. This takes 2 lines of codes.
+    inserted_ids = db.taxi.insert_many(arr).inserted_ids
+    print(len(inserted_ids), "Taxi documents inserted")
 
 
 if __name__ == "__main__":
